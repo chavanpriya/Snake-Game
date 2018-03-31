@@ -62,6 +62,9 @@ public class Board implements Serializable {
         BOARD[tail.get_row()][tail.get_column()] = 0;
 
         if(refreshSnake() && COUNT > 0) {
+            if(COUNT == 2){
+                _snake.increaseSize();
+            }
             refresh();
         }
     }
